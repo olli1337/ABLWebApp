@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prgs:model xmlns:prgs="http://www.progress.com/caf/camel/component/prgrs" id="resourceModel">
+  <prgs:resource consumes="application/json" name="_cat_catId" path="/cat/{catId}" produces="application/json">
+    <prgs:operation consumes="application/json" idls="webtutorial/.services/AppServer/Lion.pidl::com.progress.openedge.pdt.bpmbindings" name="Lion..GetCat" produces="application/json" verb="GET">
+      <prgs:param name="catId" type="PATH"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="webtutorial/.services/AppServer/Lion.pidl::com.progress.openedge.pdt.bpmbindings" name="Lion..UpdateCat" produces="application/json" verb="PUT">
+      <prgs:param name="catId" type="PATH"/>
+    </prgs:operation>
+    <prgs:operation consumes="application/json" idls="webtutorial/.services/AppServer/Lion.pidl::com.progress.openedge.pdt.bpmbindings" name="Lion..RemoveCat" produces="application/json" verb="DELETE">
+      <prgs:param name="catId" type="PATH"/>
+    </prgs:operation>
+  </prgs:resource>
+  <prgs:resource consumes="application/json" name="_cat" path="/cat" produces="application/json">
+    <prgs:operation consumes="application/json" idls="webtutorial/.services/AppServer/Lion.pidl::com.progress.openedge.pdt.bpmbindings" name="Lion..CreateCat" produces="application/json" verb="POST"/>
+    <prgs:operation consumes="application/json" idls="webtutorial/.services/AppServer/Lion.pidl::com.progress.openedge.pdt.bpmbindings" name="Lion..FetchCats" produces="application/json" verb="GET"/>
+  </prgs:resource>
+</prgs:model>

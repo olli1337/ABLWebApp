@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PASOEConfigDetails version="11.6">
+<deployAsRoot>true</deployAsRoot>
+<servers>
+<server>oepas1 in desktop-3v7q6ar.oepas1 (Pacific Application Server for OpenEdge 11.6)</server>
+</servers>
+</PASOEConfigDetails>

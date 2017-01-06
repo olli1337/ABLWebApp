@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pidl:description targetNamespace="urn:schemas-progress-com:bpm:appserverbinding:0001" serviceType="wsad:OEAppServerInvoke" xmlns:pidl="http://www.progress.com/caf/idl1.0" xmlns:java="http://www.progress.com/adapters/idl1.0/javatype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsad="urn:schemas-progress-com:bpm:appserverbinding:0001">
+<pidl:types>
+</pidl:types>
+  <pidl:interface name="com.progress.openedge.pdt.bpminterfaces">
+    <pidl:operation name="Cats..AddCat" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="catName" req="false" type="java:String">
+    </pidl:input>
+      <pidl:input messageLabel="colour" req="false" type="java:String">
+    </pidl:input>
+      <pidl:output messageLabel="successMessage" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="success" req="false" type="java:Boolean">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="Cats..GetCats" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:output messageLabel="getCat" req="false" type="java:Object">
+    </pidl:output>
+      <pidl:output messageLabel="successMessage" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="success" req="false" type="java:Boolean">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="Cats..GetNewId" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:output messageLabel="retVal" req="false" type="java:Integer">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="Cats..GetSingleCat" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="catId" req="false" type="java:Integer">
+    </pidl:input>
+      <pidl:output messageLabel="getCat" req="false" type="java:Object">
+    </pidl:output>
+      <pidl:output messageLabel="successMessage" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="success" req="false" type="java:Boolean">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="Cats..RemoveCat" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="catId" req="false" type="java:Integer">
+    </pidl:input>
+      <pidl:output messageLabel="successMessage" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="success" req="false" type="java:Boolean">
+    </pidl:output>
+    </pidl:operation>
+    <pidl:operation name="Cats..UpdateCat" pattern="http://www.progress.com/caf/idl1.0/request-response">
+      <pidl:input messageLabel="catId" req="false" type="java:Integer">
+    </pidl:input>
+      <pidl:input messageLabel="catSet" req="false" type="java:Object">
+    </pidl:input>
+      <pidl:output messageLabel="successMessage" req="false" type="java:String">
+    </pidl:output>
+      <pidl:output messageLabel="success" req="false" type="java:Boolean">
+    </pidl:output>
+    </pidl:operation>
+  </pidl:interface>
+  <pidl:binding name="com.progress.openedge.pdt.bpmbindings" interface="wsad:com.progress.openedge.pdt.bpminterfaces" type="urn:schemas-progress-com:bpm:appserverbinding:0001">
+<wsad:Operation isPersistent="false" useFullName="false" executionMode="11">
+  <wsad:Name>Cats</wsad:Name>
+  <wsad:ProcPath/>
+  <wsad:ProPath/>
+  <wsad:ProcExt>cls</wsad:ProcExt>
+  <wsad:ProcDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="true" IsMappedToSubmit="false">
+    <wsad:Name>Cats</wsad:Name>
+    <wsad:HelpString></wsad:HelpString>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>AddCat</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false">
+        <wsad:Name>AddCat</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false">
+          <wsad:Name>catName</wsad:Name>
+          <wsad:OrigName>catName</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false">
+          <wsad:Name>colour</wsad:Name>
+          <wsad:OrigName>colour</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false">
+          <wsad:Name>successMessage</wsad:Name>
+          <wsad:OrigName>successMessage</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false">
+          <wsad:Name>success</wsad:Name>
+          <wsad:OrigName>success</wsad:OrigName>
+          <wsad:Type>3</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>GetCats</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false">
+        <wsad:Name>GetCats</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false">
+          <wsad:Name>getCat</wsad:Name>
+          <wsad:OrigName>getCat</wsad:OrigName>
+          <wsad:Type>15</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+          <wsad:NamespaceUri xsi:nil="true"/>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false">
+          <wsad:Name>successMessage</wsad:Name>
+          <wsad:OrigName>successMessage</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false">
+          <wsad:Name>success</wsad:Name>
+          <wsad:OrigName>success</wsad:OrigName>
+          <wsad:Type>3</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>GetNewId</wsad:Name>
+      <wsad:ProcType>2</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="true" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false">
+        <wsad:Name>GetNewId</wsad:Name>
+        <wsad:ReturnValue allowUnknown="true" ordinal="0" writeXmlBeforeImage="false">
+          <wsad:Name>retVal</wsad:Name>
+          <wsad:OrigName>retVal</wsad:OrigName>
+          <wsad:Type>4</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:ReturnValue>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>GetSingleCat</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false">
+        <wsad:Name>GetSingleCat</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false">
+          <wsad:Name>catId</wsad:Name>
+          <wsad:OrigName>catId</wsad:OrigName>
+          <wsad:Type>4</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false">
+          <wsad:Name>getCat</wsad:Name>
+          <wsad:OrigName>getCat</wsad:OrigName>
+          <wsad:Type>15</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+          <wsad:NamespaceUri xsi:nil="true"/>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false">
+          <wsad:Name>successMessage</wsad:Name>
+          <wsad:OrigName>successMessage</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false">
+          <wsad:Name>success</wsad:Name>
+          <wsad:OrigName>success</wsad:OrigName>
+          <wsad:Type>3</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>RemoveCat</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false">
+        <wsad:Name>RemoveCat</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false">
+          <wsad:Name>catId</wsad:Name>
+          <wsad:OrigName>catId</wsad:OrigName>
+          <wsad:Type>4</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false">
+          <wsad:Name>successMessage</wsad:Name>
+          <wsad:OrigName>successMessage</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false">
+          <wsad:Name>success</wsad:Name>
+          <wsad:OrigName>success</wsad:OrigName>
+          <wsad:Type>3</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+    <wsad:InternalProc isExcluded="false" hasBadParams="false">
+      <wsad:Name>UpdateCat</wsad:Name>
+      <wsad:ProcType>1</wsad:ProcType>
+      <wsad:MethodDetail isCustomized="false" usesUnknownDefault="true" useRetVal="false" usesTTMappingDefault="true" IsTTResultSet="true" usesBeforeImageDefault="false" IsMappedToSubmit="false">
+        <wsad:Name>UpdateCat</wsad:Name>
+        <wsad:Parameter allowUnknown="true" ordinal="1" writeXmlBeforeImage="false">
+          <wsad:Name>catId</wsad:Name>
+          <wsad:OrigName>catId</wsad:OrigName>
+          <wsad:Type>4</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="2" writeXmlBeforeImage="false">
+          <wsad:Name>catSet</wsad:Name>
+          <wsad:OrigName>catSet</wsad:OrigName>
+          <wsad:Type>36</wsad:Type>
+          <wsad:Mode>1</wsad:Mode>
+          <wsad:DataSetMetaData>
+            <wsad:NamespaceUri xsi:nil="true"/>
+            <wsad:DataTable Name="updateCat" hasBeforeTable="false"/>
+          </wsad:DataSetMetaData>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="3" writeXmlBeforeImage="false">
+          <wsad:Name>successMessage</wsad:Name>
+          <wsad:OrigName>successMessage</wsad:OrigName>
+          <wsad:Type>1</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+        <wsad:Parameter allowUnknown="true" ordinal="4" writeXmlBeforeImage="false">
+          <wsad:Name>success</wsad:Name>
+          <wsad:OrigName>success</wsad:OrigName>
+          <wsad:Type>3</wsad:Type>
+          <wsad:Mode>2</wsad:Mode>
+        </wsad:Parameter>
+      </wsad:MethodDetail>
+    </wsad:InternalProc>
+  </wsad:ProcDetail>
+</wsad:Operation>
+  </pidl:binding>
+</pidl:description>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lm:eCafModel xmlns:lm="http://www.progress.com/tools/caf/core/internal/logicalStructure/schema/v1.0" version="1.0">
+  <lm:serviceCollection adapterType="REST" usage="EXPOSE">
+    <lm:services displayName="webtutorialService" id="webtutorialService" product="Progress Developer Studio for OpenEdge" serviceFolder="Expose/rest/webtutorialService" serviceName="webtutorialService">
+      <lm:details>
+        <lm:adapterDetails>
+          <lm:properties>
+            <lm:properties name="_cat::Lion..CreateCat::POST">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;
+&lt;mapping:messageMapping xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:mapping=&quot;http://www.progress.com/caf/mapping1.0&quot; xmlns:metadata=&quot;http://www.progress.com/caf/mapping1.0/toolingMetadata&quot;>&#xD;
+  &lt;metadata:toolingMetadata xsi:type=&quot;metadata:toolingMetadata&quot;>&#xD;
+    &lt;metadata:mapInput>&#xD;
+      &lt;metadata:source>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;catName&quot; expressionName=&quot;${json.object['request'].string['catName']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;colour&quot; expressionName=&quot;${json.object['request'].string['colour']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+      &lt;/metadata:source>&#xD;
+      &lt;metadata:target/>&#xD;
+    &lt;/metadata:mapInput>&#xD;
+    &lt;metadata:mapOutput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;successMessage&quot; expressionName=&quot;${json.object['response'].string['successMessage']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;success&quot; expressionName=&quot;${json.object['response'].string['success']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+      &lt;/metadata:target>&#xD;
+    &lt;/metadata:mapOutput>&#xD;
+  &lt;/metadata:toolingMetadata>&#xD;
+  &lt;mapping:mapInput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${json.object['request'].string['catName']}&quot; target=&quot;${idl.param['catName']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${json.object['request'].string['colour']}&quot; target=&quot;${idl.param['colour']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapInput>&#xD;
+  &lt;mapping:mapOutput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['successMessage']}&quot; target=&quot;${json.object['response'].string['successMessage']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['success']}&quot; target=&quot;${json.object['response'].string['success']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapOutput>&#xD;
+  &lt;mapping:mapFault name=&quot;default_fault&quot;/>&#xD;
+&lt;/mapping:messageMapping></lm:properties>
+            <lm:properties name="_cat::Lion..FetchCats::GET">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;
+&lt;mapping:messageMapping xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:mapping=&quot;http://www.progress.com/caf/mapping1.0&quot; xmlns:metadata=&quot;http://www.progress.com/caf/mapping1.0/toolingMetadata&quot;>&#xD;
+  &lt;metadata:toolingMetadata xsi:type=&quot;metadata:toolingMetadata&quot;>&#xD;
+    &lt;metadata:mapInput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target/>&#xD;
+    &lt;/metadata:mapInput>&#xD;
+    &lt;metadata:mapOutput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;getCat&quot; expressionName=&quot;${json.object['response'].object['getCat']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;success&quot; expressionName=&quot;${json.object['response'].string['success']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;successMessage&quot; expressionName=&quot;${json.object['response'].string['successMessage']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+      &lt;/metadata:target>&#xD;
+    &lt;/metadata:mapOutput>&#xD;
+  &lt;/metadata:toolingMetadata>&#xD;
+  &lt;mapping:mapInput/>&#xD;
+  &lt;mapping:mapOutput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['getCat']}&quot; target=&quot;${json.object['response'].object['getCat']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['success']}&quot; target=&quot;${json.object['response'].string['success']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['successMessage']}&quot; target=&quot;${json.object['response'].string['successMessage']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapOutput>&#xD;
+  &lt;mapping:mapFault name=&quot;default_fault&quot;/>&#xD;
+&lt;/mapping:messageMapping></lm:properties>
+            <lm:properties name="_cat_catId::Lion..GetCat::GET">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;
+&lt;mapping:messageMapping xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:mapping=&quot;http://www.progress.com/caf/mapping1.0&quot; xmlns:metadata=&quot;http://www.progress.com/caf/mapping1.0/toolingMetadata&quot;>&#xD;
+  &lt;metadata:toolingMetadata xsi:type=&quot;metadata:toolingMetadata&quot;>&#xD;
+    &lt;metadata:mapInput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target/>&#xD;
+    &lt;/metadata:mapInput>&#xD;
+    &lt;metadata:mapOutput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;getCat&quot; expressionName=&quot;${json.object['response'].object['getCat']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;successMessage&quot; expressionName=&quot;${json.object['response'].string['successMessage']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;success&quot; expressionName=&quot;${json.object['response'].string['success']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+      &lt;/metadata:target>&#xD;
+    &lt;/metadata:mapOutput>&#xD;
+  &lt;/metadata:toolingMetadata>&#xD;
+  &lt;mapping:mapInput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${rest.pathparam['/cat/{catId};catId']}&quot; target=&quot;${idl.param['catId']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapInput>&#xD;
+  &lt;mapping:mapOutput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['getCat']}&quot; target=&quot;${json.object['response'].object['getCat']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['successMessage']}&quot; target=&quot;${json.object['response'].string['successMessage']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['success']}&quot; target=&quot;${json.object['response'].string['success']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapOutput>&#xD;
+  &lt;mapping:mapFault name=&quot;default_fault&quot;/>&#xD;
+&lt;/mapping:messageMapping></lm:properties>
+            <lm:properties name="_cat_catId::Lion..RemoveCat::DELETE">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;
+&lt;mapping:messageMapping xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:mapping=&quot;http://www.progress.com/caf/mapping1.0&quot; xmlns:metadata=&quot;http://www.progress.com/caf/mapping1.0/toolingMetadata&quot;>&#xD;
+  &lt;metadata:toolingMetadata xsi:type=&quot;metadata:toolingMetadata&quot;>&#xD;
+    &lt;metadata:mapInput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target/>&#xD;
+    &lt;/metadata:mapInput>&#xD;
+    &lt;metadata:mapOutput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;successMessage&quot; expressionName=&quot;${json.object['response'].string['successMessage']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;success&quot; expressionName=&quot;${json.object['response'].string['success']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+      &lt;/metadata:target>&#xD;
+    &lt;/metadata:mapOutput>&#xD;
+  &lt;/metadata:toolingMetadata>&#xD;
+  &lt;mapping:mapInput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${rest.pathparam['/cat/{catId};catId']}&quot; target=&quot;${idl.param['catId']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapInput>&#xD;
+  &lt;mapping:mapOutput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['successMessage']}&quot; target=&quot;${json.object['response'].string['successMessage']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['success']}&quot; target=&quot;${json.object['response'].string['success']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapOutput>&#xD;
+  &lt;mapping:mapFault name=&quot;default_fault&quot;/>&#xD;
+&lt;/mapping:messageMapping></lm:properties>
+            <lm:properties name="_cat_catId::Lion..UpdateCat::PUT">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;
+&lt;mapping:messageMapping xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:mapping=&quot;http://www.progress.com/caf/mapping1.0&quot; xmlns:metadata=&quot;http://www.progress.com/caf/mapping1.0/toolingMetadata&quot;>&#xD;
+  &lt;metadata:toolingMetadata xsi:type=&quot;metadata:toolingMetadata&quot;>&#xD;
+    &lt;metadata:mapInput>&#xD;
+      &lt;metadata:source>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;catSet&quot; expressionName=&quot;${json.object['request'].object['catSet']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+      &lt;/metadata:source>&#xD;
+      &lt;metadata:target/>&#xD;
+    &lt;/metadata:mapInput>&#xD;
+    &lt;metadata:mapOutput>&#xD;
+      &lt;metadata:source/>&#xD;
+      &lt;metadata:target>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;successMessage&quot; expressionName=&quot;${json.object['response'].string['successMessage']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+        &lt;metadata:mappablesData displayName=&quot;success&quot; expressionName=&quot;${json.object['response'].string['success']}&quot; mappableType=&quot;MANUAL&quot;/>&#xD;
+      &lt;/metadata:target>&#xD;
+    &lt;/metadata:mapOutput>&#xD;
+  &lt;/metadata:toolingMetadata>&#xD;
+  &lt;mapping:mapInput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${rest.pathparam['/cat/{catId};catId']}&quot; target=&quot;${idl.param['catId']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${json.object['request'].object['catSet']}&quot; target=&quot;${idl.param['catSet']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapInput>&#xD;
+  &lt;mapping:mapOutput>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['successMessage']}&quot; target=&quot;${json.object['response'].string['successMessage']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+    &lt;mapping:rule action=&quot;None&quot; resource=&quot;&quot; source=&quot;${idl.param['success']}&quot; target=&quot;${json.object['response'].string['success']}&quot; type=&quot;INTERFACE_PARAM&quot;/>&#xD;
+  &lt;/mapping:mapOutput>&#xD;
+  &lt;mapping:mapFault name=&quot;default_fault&quot;/>&#xD;
+&lt;/mapping:messageMapping></lm:properties>
+            <lm:properties name="applicationRelativePath">/webtutorialService</lm:properties>
+          </lm:properties>
+        </lm:adapterDetails>
+        <lm:productDetails name="ABL_REST">
+          <lm:properties>
+            <lm:properties name="ABL_REST_SERVICE">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?>&lt;abl_rest>&lt;service>&lt;name>webtutorialService&lt;/name>&lt;resources/>&lt;/service>&lt;/abl_rest></lm:properties>
+          </lm:properties>
+        </lm:productDetails>
+      </lm:details>
+      <lm:nodes id="/webtutorialService_groupingNode" name="webtutorialService">
+        <lm:details>
+          <lm:adapterDetails/>
+        </lm:details>
+      </lm:nodes>
+      <lm:propertyDetails/>
+    </lm:services>
+  </lm:serviceCollection>
+  <lm:propertyDetails>
+    <lm:propertyFileLocation>webtutorial.properties</lm:propertyFileLocation>
+  </lm:propertyDetails>
+</lm:eCafModel>
